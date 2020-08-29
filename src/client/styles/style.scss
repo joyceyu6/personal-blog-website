@@ -1,0 +1,126 @@
+
+
+/* Anything smaller than first breakpoint 600px */
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 250px 2fr;
+    grid-template-areas:
+        "h"
+        "holder"
+        "pic"
+        "post"
+      
+}
+
+.h,.holder{
+    width: 100%;
+    height: 100%;
+    background: #F8FA9D;
+}
+
+.pic,.post{
+    width: 100%;
+    height: 100%;
+    background: pink;
+    overflow-wrap: normal;
+}
+
+.header{
+    grid-area: h;
+}
+
+.image{
+    object-fit: cover;
+    grid-area: pic;
+}
+
+.postData{
+    object-fit:cover;
+    grid-area:post
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 36px;
+}
+
+input{
+    display:block;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+button{
+    background: white;
+    color: black;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 2px 4px 5px #444;
+}
+
+h1{
+    font-size: 72px;
+}
+
+textarea{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+// /* Reset style for HTML element on active to have no border*/
+input:hover,
+select:hover,
+textarea:hover{
+    border: 2px black solid;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+
+/*Medium Screens*/
+@media(min-width:640px) and (max-width:900px){
+    .container{
+        display:grid;
+        grid-template-columns:300px,300px,1fr;
+        grid-template-rows: 250px,600px;
+        grid-template-areas:
+        "h h holder"
+        "pic pic post"
+  
+    }
+}
+
+/*Large Screens*/
+@media(min-width:901px){
+    .container{
+        display:grid;
+        grid-template-areas:
+        "h holder"
+        "pic post"
+        "pic post"
+        "pic post"
+    }
+}
