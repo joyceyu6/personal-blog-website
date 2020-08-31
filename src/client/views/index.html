@@ -3,17 +3,32 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Travel Planner</title>
+  <title>Personal Travel Blog</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href="style.scss"> -->
 </head>
 <body>
-  <div class = "container"> 
-    <div class ="h header">
-      <!--Header-->
-      <h1> Travel Planner</h1>
+  <div class = "container">  
+    <div class ="n navbar">
+      <!-- to do - flexbox -->
+      <h4> Subscribe</h1>
+      <h1> Travel Blog</h1>
     </div>
-    <div class = "holder">
+      <!-- to do - flexbox -->
+      <div class="post card">
+        <img src = "<%= require('../images/tahoe.jpg') %>" alt="Tahoe picture">
+        <div class="frame">
+          <h4><b>Lake Tahoe</b></h4>
+          <p>California, U.S</p>
+        </div>
+      </div>
+      <!--Header-->
+      <div class = "f footer">
+        <h4> Copyright 1999-2020 by Joyce Yu. All Rights Reserved.</h4>
+      </div>
+    </div>
+   
+    <!-- <div class = "post card">
       <label for="holder">Travel Desitnation</label>
       <input type="text" id="city" placeholder="Enter city name here">
       <label for="holder">Departure Date</label>
@@ -52,9 +67,9 @@
     <div>
       <label>Typical weather for then:</label>
       <weather id = "weather"></weather>
-   </div> 
+   </div>  -->
    <!-- enable service worker installation -->
-   <script>
+   <!-- <script>
     /* Check that service workers are supported */
     if ('serviceWorker' in navigator) {
         /* Use the window load event to keep the page load performant */
@@ -62,6 +77,6 @@
             navigator.serviceWorker.register('/service-worker.js');
         });
     }
-  </script>
+  </script> -->
 </body>
 </html>

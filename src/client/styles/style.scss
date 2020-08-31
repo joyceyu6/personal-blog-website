@@ -4,41 +4,65 @@
 .container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 250px 2fr;
+    grid-template-rows: 1fr 250px 50px;
     grid-template-areas:
-        "h"
-        "holder"
-        "pic"
-        "post"
+        "n"
+        "p"
+        "f"
+        
       
 }
 
-.h,.holder{
+.navbar{
     width: 100%;
     height: 100%;
     background: #F8FA9D;
 }
 
-.pic,.post{
+.postcard,.footer{
     width: 100%;
     height: 100%;
     background: pink;
     overflow-wrap: normal;
 }
 
-.header{
-    grid-area: h;
+.navbar{
+    grid-area: n;
 }
 
-.image{
-    object-fit: cover;
-    grid-area: pic;
-}
-
-.postData{
+.postcard{
     object-fit:cover;
-    grid-area:post
+    grid-area:p
 }
+
+.footer{
+    object-fit: cover;
+    grid-area: f;
+}
+
+/*cards on blog website*/ 
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+
+  img {
+    border-radius: 5px 5px 0 0;
+    display:inline-block;
+    padding: 10px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .frame {
+    padding: 2px 16px;
+  }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
@@ -107,8 +131,9 @@ button:hover {
         grid-template-columns:300px,300px,1fr;
         grid-template-rows: 250px,600px;
         grid-template-areas:
-        "h h holder"
-        "pic pic post"
+        "n n"
+        "p p p"
+        "f"
   
     }
 }
@@ -118,9 +143,8 @@ button:hover {
     .container{
         display:grid;
         grid-template-areas:
-        "h holder"
-        "pic post"
-        "pic post"
-        "pic post"
+        "n n n "
+        "p p p"
+        "f f f"
     }
 }
