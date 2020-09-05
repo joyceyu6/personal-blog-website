@@ -21,7 +21,16 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
+            },
+            {
+                test: /\.(png|jp(e*)g|svg)$/,  
+                use: {
+                    loader: 'file-loader',
+                    options: { 
+                        esModule:false
+                    } 
+                }
+            },
         ]
     },
     plugins: [
@@ -29,6 +38,7 @@ module.exports = {
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
+
         new CleanWebpackPlugin({
             // Simulate the removal of files
             dry: true,

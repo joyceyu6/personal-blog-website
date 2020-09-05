@@ -1,9 +1,21 @@
-# Project: Travel App
+# Project: Personal Blog Website
 
 ## Project Description
-Build a web tool that allows users to enter the location they are traveling to and the date they are leaving and get the current (if depaturure date is within one week) or a predicted weather forecast
+Build out a personal blog website, including custom images, layout, and styling. 
 
-## Prerequisites Summary
+## List of third-party resources
+* [html & css courses](www.udacity.com) from Udacity
+* [Geonames API](https://www.geonames.org/) from which we get a city's geo location
+* [Pixabay API](https://pixabay.com/) from which we get a city's image
+* [Weatherbit API](https://www.weatherbit.io/) from which we get weather forecast
+
+
+
+## Addtional Notes
+**Important**
+
+----------------------------------below is just for my personal reference----------------------------------------------
+## Addtional Tools Summary 
 * Webserver - Node
 * Web application framework for routing - Express
 * Build tool - Webpack with dev and prod environments
@@ -12,7 +24,7 @@ Build a web tool that allows users to enter the location they are traveling to a
 * Service Worker
 * NodeJs/Express API Test - Jest and Supertest
 
-## Install Prerequisites
+## Install Addtional Tools 
 1. Install NPM or upgrade NPM if you already have it installed 
         
         npm install  
@@ -40,12 +52,10 @@ Build a web tool that allows users to enter the location they are traveling to a
         npm i -D html-webpack-plugin
         npm i -D mini-css-extract-plugin
         npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
+        npm install image-webpack-loader --save-dev
+        npm install --save-dev file-loader
 
-6. Install Service Worker
-        
-        npm install workbox-webpack-plugin --save-dev
-
-## Run the code
+## Run Addtional Code
 1. How to run development environment of the Application
 
 * Open one terminal and run below code
@@ -65,30 +75,11 @@ Build a web tool that allows users to enter the location they are traveling to a
         npm run start
 * Check the website running at http://localhost:3000/
 
-3. How to test Service Worker is working:
-* Open project in Production environment (reference #2 in "Run the code" section)
-* Open browser at http://localhost:3000/
-* Close Node server (`Ctrl +  C` in terminal)
-* Refresh browser page at http://localhost:3000/
-* Page is still available
 
 
 
 
-## Other tools installed during development
 
-
-## List of third-party resources
-* [Webpack courses](www.udacity.com) from Udacity
-* [Geonames API](https://www.geonames.org/) from which we get a city's geo location
-* [Pixabay API](https://pixabay.com/) from which we get a city's image
-* [Weatherbit API](https://www.weatherbit.io/) from which we get weather forecast
-
-
-## Addtional Notes
-**Important**
-* Due to Weatherbit API free access limit, departure date for this demo can only be one day from today
-* Extend Option Implemented: input end date and display length of trip
 
 
 

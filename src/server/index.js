@@ -33,31 +33,31 @@ const server = app.listen(port, listening);
   };
   
 
-  // GET route
-  const weatherData=[];
+//   // GET route
+//   const weatherData=[];
   
-  app.get('/all',getData)
+//   app.get('/all',getData)
   
-  function getData(req,res){
-    res.send(weatherData)
-    console.log(weatherData)
-  }
+//   function getData(req,res){
+//     res.send(weatherData)
+//     console.log(weatherData)
+//   }
   
-  //POST route
-  app.post('/addWeather', addWeather);
+//   //POST route
+//   app.post('/addWeather', addWeather);
 
   
-  function addWeather(req,res){
-    const newEntry = req.body;
+//   function addWeather(req,res){
+//     const newEntry = req.body;
 
-    if (weatherData.length == 0){
-      weatherData.push(newEntry);
-    }
-    else{
-      weatherData[0] = newEntry;    
-    }
+//     if (weatherData.length == 0){
+//       weatherData.push(newEntry);
+//     }
+//     else{
+//       weatherData[0] = newEntry;    
+//     }
    
-    res.end();
-}
+//     res.end();
+// }
 
 module.exports = app;
