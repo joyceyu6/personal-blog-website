@@ -4,10 +4,9 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    entry: './src/client/index.js',
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
+    entry: {
+        index: './src/client/index.js',
+        post:'./src/client/post.js'
     },
     mode: 'development',
     devtool: 'source-map',
@@ -15,7 +14,6 @@ module.exports = {
         rules: [
             {
                 test: '/\.js$/',
-                exclude: /node_modules/,
                 loader: "babel-loader"
             },
             {
@@ -28,7 +26,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: { 
                         esModule:false
-                    } 
+                    }
                 }
             },
         ]
@@ -36,19 +34,16 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
-            filename: "./index.html",
+            inject: true,
+            chunks:['index'],
+            filename: "index.html",
         }),
 
-        new CleanWebpackPlugin({
-            // Simulate the removal of files
-            dry: true,
-            // Write Logs to Console
-            verbose: true,
-            // Automatically remove all unused webpack assets on rebuild
-            cleanStaleWebpackAssets: true,
-            protectWebpackAssets: false
+        new HtmlWebPackPlugin({
+            template: "./src/client/views/post.html",
+            inject: true,
+            chunks:['post'],
+            filename: "post.html",
         })
     ]
-  
-
 }
