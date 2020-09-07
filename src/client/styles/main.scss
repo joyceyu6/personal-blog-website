@@ -1,4 +1,7 @@
 
+@import "text.scss";
+@import "url.scss";
+@import "image.scss";
 
 /* Anything smaller than first breakpoint 600px */
 .container{
@@ -75,16 +78,6 @@
 //    padding: 2px 16px;
 //   }
 
-img{
-    max-width: 90%;
-    max-height: 90%;
-    width: 300px;
-    height: 200px;
-    // border-radius: 5px 5px 0 0;
-    display:inline-block;
-    padding: 10px;
-}
-
 button {
     border: none;
     outline: 0;
@@ -98,12 +91,6 @@ button {
     font-size: 18px;
 }
 
-a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-}
-
   /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -112,75 +99,6 @@ a {
 button:hover, a:hover {
     opacity: 0.7;
 }
-
-/*  Basic Styling To Override Default For Basic HTML Elements */
-// label{
-//     display:block;
-//     font-size: 36px;
-// }
-
-// input{
-//     display:block;
-//     font-size: 20px;
-//     font-family: 'Oswald', sans-serif;
-    
-// }
-
-// button{
-//     background: white;
-//     color: black;
-//     font-size: 20px;
-//     font-family: 'Oswald', sans-serif;
-//     box-shadow: 2px 4px 5px #444;
-// }
-
-h1{
-    font-size: 36px;
-}
-
-h2{
-    color: grey;
-    font-size: 18px;
-}
-
-p{
-    font-size: 18px;
-}
-
-// textarea{
-//     font-size: 18px;
-//     font-family: 'Oswald', sans-serif;
-// }
-
-// /* Reset style for HTML element on active to have no border*/
-// input:hover,
-// select:hover,
-// textarea:hover{
-//     border: 2px black solid;
-// }
-
-// button:hover {
-//     background-color: grey;
-// }
-
-// /* Style for Placeholder Text*/
-// ::placeholder { /* Firefox, Chrome, Opera */ 
-//     color: #f0d43a; 
-//     font-family: 'Oswald', sans-serif;
-
-// } 
-  
-// :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-//     color: #f0d43a; 
-//     font-family: 'Oswald', sans-serif;
-
-// } 
-  
-// ::-ms-input-placeholder { /* Microsoft Edge */ 
-//     color: #f0d43a; 
-//     font-family: 'Oswald', sans-serif;
-
-// } 
 
 @media screen and (max-width: 640px) {
     .postcard {

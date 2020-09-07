@@ -3,49 +3,63 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Post to do</title>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet"> -->
+  <title>Blog Post</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="style.scss"> -->
+  <!-- <link rel="stylesheet" href="style.scss">used webpack instead -->
 </head>
 <body>
   <div class = "container">  
     <!-- navigation bar -->
-    <div class ="n navbar">
+    <div class ="navbar">
       <!--flexbox navigation bar -->
       <div class = "nav_one">
-        <a href="#"><h2>Subscribe</h2></a>
+        <a href="#"><h4>Subscribe</h4></a>
       </div>
       <div class = "nav_two">
-        <h1> Travel Blog</h1>
+        <h1> Travel Post</h1>
+      </div>
+      <div class = "nav_three">
+        <a href="index.html"><i class="fa fa-home"></i></a>
       </div>
     </div>
-    <!-- travel destinations with picture -->
-    <div class="postcard">
-      <div class = "pc_one">
-        <div class="card">
-          <img src = "<%= require('../images/tahoe.jpg') %>" alt="Tahoe picture">
-          <h2><b>Lake Tahoe</b></h2>
-          <p>California, U.S</p>
-        </div>
+     <!--post area -->
+    <div class="blogpost">
+        <h3>72 PERFECT HOURS IN LAKE TAHOE</h1>
+        <h2>by Quin Schrock</h2>
+        <br>
+        <p>“The air up there in the clouds is very pure and fine, bracing and delicious. And why shouldn’t it be? — it is the same the angels breathe.” -  Mark Twain, writing about Lake Tahoe in Roughing It</p>
+        <br>
+        <h2>SCENT OF A HAPPY PLACE</h2>
+        <p>The scent of pine sap and dirt elicited a flood of vivid childhood memories. It was summertime and I was maybe 5 years old. There was a cool breeze coming off the lake. We scrambled from one giant boulder to the next, avoiding the hot sand that flowed below us like lava. Eventually we found the magic spot. Cool water replaced the hot lava and Kris put a piece of bacon on the end of a clothes hanger. He carefully lowered the bacon down between two rocks with the precision of a surgeon. We watched wide eyed as a small clawed creature emerged from the darkness into the clear blue water. It made its way over to the bacon and latched on! Our little hearts raced with excitement. Crawdad! </p>
+        <h2>LAKE TAHOE - THE HAPPIEST PLACE ON EARTH</h2>
+        <p>It seemed like a lifetime ago since I’d scrambled around on these rocks, but Tahoe had left its mark, and now all those dormant memories were waking up. A warm, safe feeling washed over me: a happy place feeling. </p>
+        <div></div>
+        <p>My parents both grew up in Reno. They met at Wooster High, stayed friends at the University of Nevada, and got married shortly after my dad started graduate school. They moved away for work, but their friends, families, and formative years remained in Nevada. And so, every summer my parents would pack my little brother Kris and I up, and we’d make the road trip back “home” to Reno, from wherever we happened to live at the time. </p>
+        <h2>THE BEST THINGS TO DO AT LAKE TAHOE</h2>
+        <p>There’s no shortage of things to do in Lake Tahoe. In fact, the lake is so big and there are so many activities, and places to see, that it can be hard to know where to start. That being said, you don’t need a lot of time to experience the bests of what Lake Tahoe has to offer! But one of my favorite things about The Lake, is that you don’t need a lot of time. You can do a lot of what the Lake Tahoe has to offer, and take some beautiful photos along the way, in a long weekend! </p>
+        <br>
+        <br>
+        <br>
+    </div>
+    <!--side bar for archive and addl. info -->
+    <div class="sidebar">
+      <div id = "sb_one">
+          <h2><b>ABOUT JESS WANDERING</b></h2>
+          <p>Hi, I’m Jess, an outdoor enthusiast based in Seattle. Growing up I tried to suppress my wanderlust in pursuit of a traditional career path, but after a short stint as a lawyer, I left the confines of my office to get back in touch with my roots. Now, I wander the world taking photos, making memories, and sharing my love for travel with others!</p>
       </div>
-      <div class = "pc_two">
-        <div class="card">
-          <img src = "<%= require('../images/cancun.jpg') %>" alt="Cancun picture">
-          <h2><b>Cancun</b></h2>
-          <p>Quintana Roo, Mexico</p>
-        </div>
+      <div id = "sb_two">
+          <h2><b>ARCHIVES</b></h2>
+          <a href="#"><h4>Cancun</h4></a>
+          <a href="#"><h4>Sydney</h4></a>
       </div>
-      <div class = "pc_three">
-        <div class="card">
-          <img src = "<%= require('../images/sydney.jpg') %>" alt="Sydney picture">
-          <h2><b>Sydney</b></h2>
-          <p>New South Wales, Australia</p>
-        </div>
+      <div id = "sb_three">
+          <h2><b>MORE INFO</b></h2>
+          <a href="https://www.tripadvisor.com/Tourism-g155987-Lake_Tahoe_California_California-Vacations.html"><h4>Trip Adviser</h4></a>
+          <a href="https://en.wikipedia.org/wiki/Lake_Tahoe"><h4>Wikipedia</h4></a>
       </div>
     </div>
     <!--Footer-->
-    <div class = "f footer">
+    <div class = "footer">
       <a href="#"><i class="fa fa-dribbble"></i></a>
       <a href="#"><i class="fa fa-twitter"></i></a>
       <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -54,56 +68,5 @@
       <p> Copyright 1999-2020 by Joyce Yu. All Rights Reserved.</p>
     </div>
   </div>
-   
-    <!-- <div class = "post card">
-      <label for="holder">Travel Desitnation</label>
-      <input type="text" id="city" placeholder="Enter city name here">
-      <label for="holder">Departure Date</label>
-      <textarea class= "Input" id="date" placeholder="Enter your leaving date YYYY-MM-DD" rows="1" cols="40"></textarea>
-      <label for="holder">Returning Date</label>
-      <textarea class= "Input" id="enddate" placeholder="Enter your returning date YYYY-MM-DD" rows="1" cols="40"></textarea>
-      <div>
-        <button id="generate" type = "submit"> Save Trip </button>
-      </div>
-    </div>
-  <div class="pic image">
-    <img id ="img">
-  </div>
-  <div class = "post postData">
-    <br />
-    <div> 
-      <returnCity id = "returnCity">
-      <label for="returnCity">My trip to: </label>
-    </div> 
-    <br />
-    <div>
-      <returnDate id = "returnDate">
-      <label for="returnDate">Departing: </label>
-    </div> 
-    <br />
-    <div>
-      <returnDate id = "days">
-      <label for="days">Days to departing:</label>
-    </div> 
-    <br />
-    <div>
-      <returnDate id = "stay">
-      <label for="stay">Length of trip:</label>
-    </div> 
-    <br />
-    <div>
-      <label>Typical weather for then:</label>
-      <weather id = "weather"></weather>
-   </div>  -->
-   <!-- enable service worker installation -->
-   <!-- <script>
-    /* Check that service workers are supported */
-    if ('serviceWorker' in navigator) {
-        /* Use the window load event to keep the page load performant */
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
-        });
-    }
-  </script> -->
 </body>
 </html>
