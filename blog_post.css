@@ -19,13 +19,11 @@
 .navbar{
     width: 100%;
     height: 100%;
-    // background: #F8FA9D;
     background:white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: baseline;
-    // border: 2px solid yellow;
     grid-area: n;
 }
 
@@ -44,10 +42,7 @@
     background:white;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     flex-wrap: wrap;
-    // overflow-wrap: normal;
-    // object-fit:cover;
     justify-content: space-between;
     grid-area:s
 }
@@ -68,14 +63,9 @@
 #sb_one{
     border:2px solid gray;
     padding:10px;
-    // margin:10px;
-    // background: grey;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    // max-width: 300px;
-    // width: 300px;
-    // height: 300px;
     margin: auto;
     text-align: justify; 
 }
@@ -91,7 +81,6 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-    // box-shadow: 2px 4px 5px #444;
 }
 
 a {

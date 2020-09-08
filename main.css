@@ -1,7 +1,7 @@
 
-@import "text.scss";
-@import "url.scss";
-@import "image.scss";
+@import "text.css";
+@import "url.css";
+@import "image.css";
 
 /* Anything smaller than first breakpoint 600px */
 .container{
@@ -21,13 +21,11 @@
 .navbar{
     width: 100%;
     height: 100%;
-    // background: #F8FA9D;
     background:white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: baseline;
-    // border: 2px solid yellow;
     grid-area: n;
 }
 
@@ -37,7 +35,6 @@
     background:white;
     display: flex;
     flex-direction: row;
-    // align-items: center;
     overflow-wrap: normal;
     object-fit:cover;
     grid-area:p
@@ -66,18 +63,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    // max-width: 300px;
-    width: 300px;
-    height: 200px;
     margin: auto;
     text-align: center;
 }
 
   /* Add some padding inside the card container */
-// .frame {
-//    padding: 2px 16px;
-//   }
-
 button {
     border: none;
     outline: 0;

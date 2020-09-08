@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Personal Travel Blog</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
   <!-- <link rel="stylesheet" href="style.scss"> -->
 </head>
 <body>
@@ -24,24 +25,27 @@
       <div class = "pc_one">
         <div class="card">
           <a href="post.html">
-            <img src = "<%= require('../images/tahoe.jpg') %>" alt="Tahoe picture">
+            <figure>
+              <img src = "./images/tahoe.jpg" alt="Tahoe picture">
+              <figcaption>Lake Tahoe, California, U.S</figcaption>
+            </figure>
           </a>
-          <a href="post.html"><h2> Lake Tahoe</h2></a>
-          <p>California, U.S</p>
         </div>
       </div>
       <div class = "pc_two">
         <div class="card">
-          <img src = "<%= require('../images/cancun.jpg') %>" alt="Cancun picture">
-          <h2><b>Cancun</b></h2>
-          <p>Quintana Roo, Mexico</p>
-        </div>
+          <figure>
+            <img src = "./images/cancun.jpg" alt="Cancun picture">
+            <figcaption>Cancunp, Quintana Roo, Mexico</figcaption> 
+          </figure>
+       </div>
       </div>
       <div class = "pc_three">
         <div class="card">
-          <img src = "<%= require('../images/sydney.jpg') %>" alt="Sydney picture">
-          <h2><b>Sydney</b></h2>
-          <p>New South Wales, Australia</p>
+          <figure>
+            <img src = "./images/sydney.jpg" alt="Sydney picture">
+            <figcaption>Sydney, Australia</figcaption>
+          </figure>
         </div>
       </div>
     </div>
